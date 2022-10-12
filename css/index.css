@@ -6,14 +6,16 @@
 
 body {
     background-color: #111;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 table {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5px;
     color: #fff;
     border-collapse: collapse;
     width: calc(80vw + .1rem);
@@ -21,68 +23,159 @@ table {
 
 table caption {
     color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
     font-size: calc(3.5vw + .1rem);
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: calc(2vh + .1rem);
 }
 
-td, th {
-    border: #777 2px solid;
+td {
     background-color: #222;
-    text-align: left;
-    padding: calc(3vh + .1rem) calc(2vw + .1rem);
+    text-align: center;
+    padding: calc(3vh + .1rem) calc(1vw + .1rem);
     font-size: calc(1.5vw + .1rem);
+}
+
+.label-td {
+    border: #777 2px solid;
+    border-right: 0;
+}
+
+.input-td {
+    border: #777 2px solid;
+    border-left: 0;
 }
 
 .input-group {
     display: table;
     width: fit-content;
+    margin: 0 auto;
 }
 
 .btn {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5px;
     text-align: center;
     font-size: calc(1.5vw + .1rem);
     background-color: #777;
     color: #fff;
     border: 1px solid #999;
     width: calc(2.5vw + .1rem);
+    border-radius: 12px;
 }
 
 input {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5px;
     text-align: center;
     background-color: #333;
     color: #fff;
     font-size: calc(1.5vw + .1rem);
     border: 1px solid #999;
     width: calc(4.5vw + .1rem);
+    border-radius: 12px;
+    margin: 0 0.5vw;
 }
 
 input[type="number"] {
     -webkit-appearance: textfield;
        -moz-appearance: textfield;
             appearance: textfield;
-  }
+}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     display: none;
 }
 
 input[type=time] {
-    width: calc(11vw + .1rem);
+    width: calc(4.5vw + .1rem + 2.5vw + .1rem + 0.5vw);
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(100%) sepia(6%) saturate(24%) hue-rotate(246deg) brightness(103%) contrast(102%);
+    /*filter: invert(100%) sepia(6%) saturate(24%) hue-rotate(246deg) brightness(103%) contrast(102%);
     cursor: pointer;
     width: calc(2vw + .1rem);
     margin: 0;
-    padding: 0;
+    padding: 0;*/
+    display: none;
  }
 
 #chrono {
+    border: #777 2px solid;
+    background-color: green;
     padding: calc(6vh + .1rem) 0;
     text-align: center;
     font-size: calc(2.5vw + .1rem);
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 550px) {
+	
+    html {
+        height: -webkit-fill-available;
+    }
+
+    body {
+        height: 100vh;
+        height: -webkit-fill-available;
+    }
+
+    table,
+    caption, 
+    thead, 
+    tbody, 
+    th, 
+    td, 
+    tr{ 
+        
+    display: block
+        
+    }
+     
+    table { 
+        margin: 3vh 0;
+    }
+
+    .label-td {
+        border: #777 2px solid;
+    }
+
+    .input-td {
+        border: #777 2px solid;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    table caption {
+        font-size: calc(7.5vw + .1rem);
+    }
+
+    #chrono {
+        font-size: calc(10vw + .1rem);
+        padding: calc(3vh + .1rem) 0;
+    }
+
+    td {
+        font-size: calc(4.8vw + .1rem);
+        padding: calc(1.2vh + .1rem) calc(1vw + .1rem);
+    }
+
+    .btn {
+        font-size: calc(4.8vw + .1rem);
+        width: calc(5.5vw + .1rem);
+        border-radius: 6px;
+    }
+
+    input {
+        font-size: calc(4.8vw + .1rem);
+        width: calc(12vw + .1rem);
+        margin: 0 2vw;
+        border-radius: 6px;
+    }
+
+    input[type=time] {
+        width: calc(20vw + .1rem);
+    }
 }

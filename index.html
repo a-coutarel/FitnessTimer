@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#111" />
     <meta name="description" content="Timer for giga chad">
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link href="css/index.css" rel="stylesheet" />
     <title>Chad Timer</title>
 </head>
@@ -15,17 +15,17 @@
     <table>
         <caption>Chad Timer</caption>
         <tr>
-            <td>
+            <td class="label-td"><label for="nbr-exos">Nombre d'exos : </label></td>
+            <td class="input-td">
                 <div class="input-group">
-                        <label for="nbr-exos">Nombre d'exos : </label>
-                        <button class="btn" onclick="document.querySelector('#nbr-exos').stepDown(); document.querySelector('#nbr-exos').dispatchEvent(new Event('change'))">-</button>
-                        <input type="number" id="nbr-exos" name="nbr-exos" min="1" value="3">
-                        <button class="btn" onclick="document.querySelector('#nbr-exos').stepUp(); document.querySelector('#nbr-exos').dispatchEvent(new Event('change'))">+</button>
+                    <button class="btn" onclick="document.querySelector('#nbr-exos').stepDown(); document.querySelector('#nbr-exos').dispatchEvent(new Event('change'))">-</button>
+                    <input type="number" id="nbr-exos" name="nbr-exos" min="1" value="3">
+                    <button class="btn" onclick="document.querySelector('#nbr-exos').stepUp(); document.querySelector('#nbr-exos').dispatchEvent(new Event('change'))">+</button>
                 </div>
             </td>
-            <td>
+            <td class="label-td"><label for="nbr-series">Nombre de series : </label></td>
+            <td class="input-td">
                 <div class="input-group">
-                    <label for="nbr-series">Nombre de series : </label>
                     <button class="btn" onclick="document.querySelector('#nbr-series').stepDown(); document.querySelector('#nbr-series').dispatchEvent(new Event('change'))">-</button>
                     <input type="number" id="nbr-series" name="nbr-series" min="1" value="4">
                     <button class="btn" onclick="document.querySelector('#nbr-series').stepUp(); document.querySelector('#nbr-series').dispatchEvent(new Event('change'))">+</button>
@@ -33,35 +33,29 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <label for="time-serie">Temps de repos inter-série : </label>
-                <input type="time" name="time-serie" id="time-serie" value="00:01:30" step="1">
-            </td>
-            <td>
-                <label for="time-exo">Temps de repos inter-exo : </label>
-                <input type="time" name="time-exo" id="time-exo" value="00:03:00" step="1">
-            </td>
+            <td class="label-td"><label for="time-serie">Temps de repos inter-série : </label></td>
+            <td class="input-td"><input type="time" name="time-serie" id="time-serie" value="01:30" step="60"></td>
+            <td class="label-td"><label for="time-exo">Temps de repos inter-exo : </label></td>
+            <td class="input-td"><input type="time" name="time-exo" id="time-exo" value="03:00" step="60"></td>    
         </tr>
         <tr>
-            <td>
+            <td class="label-td"><label for="num-exo">Numéro de l'exo : </label></td>
+            <td class="input-td">
                 <div class="input-group">
-                    <label for="num-exo">Numéro de l'exo : </label>
-                    <button class="btn" onclick="document.querySelector('#num-exo').stepDown(); document.querySelector('#num-exo').dispatchEvent(new Event('change'))">-</button>
                     <input type="number" id="num-exo" name="num-exo" min="1" value="1">
-                    <button class="btn" onclick="document.querySelector('#num-exo').stepUp(); document.querySelector('#num-exo').dispatchEvent(new Event('change'))">+</button>
+                    <button class="btn num-exo-btn" onclick="document.querySelector('#num-exo').stepUp(); document.querySelector('#num-exo').dispatchEvent(new Event('change'))">+</button>
                 </div>
             </td>
-            <td>
+            <td class="label-td"><label for="num-serie">Numéro de la série : </label></td>
+            <td class="input-td">
                 <div class="input-group">
-                    <label for="num-serie">Numéro de la série : </label>
-                    <button class="btn" onclick="document.querySelector('#num-serie').stepDown(); document.querySelector('#num-serie').dispatchEvent(new Event('change'))">-</button>
                     <input type="number" id="num-serie" name="num-serie" min="1" value="1">
-                    <button class="btn" onclick="document.querySelector('#num-serie').stepUp(); document.querySelector('#num-serie').dispatchEvent(new Event('change'))">+</button>
+                    <button class="btn num-serie-btn" onclick="document.querySelector('#num-serie').stepUp(); document.querySelector('#num-serie').dispatchEvent(new Event('change'))">+</button>
                 </div>
             </td>
         </tr>
         <tr>
-            <td colspan="2" id="chrono"></td>
+            <td colspan="4" id="chrono">Let's go !</td>
         </tr>
     </table>
 
