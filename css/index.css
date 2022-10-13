@@ -135,12 +135,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     .label-td {
         border: #777 2px solid;
+        border-bottom: 0;
     }
 
     .input-td {
         border: #777 2px solid;
         border-top: 0;
         border-bottom: 0;
+        padding-top: 0;
     }
 
     table caption {
@@ -154,7 +156,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     td {
         font-size: calc(4.8vw + .1rem);
-        padding: calc(1.2vh + .1rem) calc(1vw + .1rem);
+        padding: calc(1.5vh + .1rem) calc(1vw + .1rem);
     }
 
     .btn {
