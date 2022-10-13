@@ -102,6 +102,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;
  }
 
+input[type="time"]::-webkit-clear-button {
+    display: none;
+}
+
 #chrono {
     border: #777 2px solid;
     background-color: green;
@@ -115,6 +119,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 	
     body {
        height: 100%;
+       min-height: 100vh;
+       overflow: scroll;
     }
 
     table,
