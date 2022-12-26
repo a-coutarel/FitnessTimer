@@ -48,7 +48,6 @@ num_exo.addEventListener("change", () => {
 })
 
 num_serie.addEventListener("change", () => {
-
     if(timer!==null){
         clearInterval(timer);
     }
@@ -92,4 +91,17 @@ window.addEventListener("load", () => {
     whistle = new Audio('../assets/whistle.mp3');
     num_exo.max = nbr_exos.value;
     num_serie.max = nbr_series.value;
+});
+
+
+document.addEventListener('keypress', (event) => {
+    if (event.code === 'Space') {
+        num_serie.stepUp();
+        num_serie.dispatchEvent(new Event('change'));
+    }
+
+    if (event.code === 'Enter') {
+        num_exo.stepUp();
+        num_exo.dispatchEvent(new Event('change'));
+    }
 });
