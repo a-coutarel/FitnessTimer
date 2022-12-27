@@ -96,12 +96,16 @@ window.addEventListener("load", () => {
 
 document.addEventListener('keypress', (event) => {
     if (event.code === 'Space') {
-        num_serie.stepUp();
-        num_serie.dispatchEvent(new Event('change'));
+        if(num_serie.value > 0 && num_serie.value < num_serie.max) {
+            num_serie.stepUp();
+            num_serie.dispatchEvent(new Event('change'));
+        }
     }
 
     if (event.code === 'Enter') {
-        num_exo.stepUp();
-        num_exo.dispatchEvent(new Event('change'));
+        if(num_exo.value > 0 && num_exo.value < num_exo.max) {
+            num_exo.stepUp();
+            num_exo.dispatchEvent(new Event('change'));
+        }
     }
 });
